@@ -13,6 +13,5 @@ namespace Data.Models
         public string Summary { get; set; }
         public string Level { get; set; }
         public string Stack { get; set; }
-        public string Skills { get; set; }
     }
 }
