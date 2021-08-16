@@ -9,5 +9,7 @@ namespace Data.Models
     public class Skills : Base
     {
         public string  Name { get; set; }
+        public string Type { get; set; }
+        public string Description { get; set; }
     }
 }
