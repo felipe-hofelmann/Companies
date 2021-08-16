@@ -11,6 +11,5 @@ namespace Data.Models
             public string Name { get; set; }
             public string IE { get; set; }
             public string CNPJ { get; set; }
-
     }
 }
