@@ -12,6 +12,8 @@ namespace Data.Context
     {
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Profile> Profiles { get; set; }
+        public DbSet<Skills> Skills { get; set; }
+        public DbSet<Jobs> Jobs { get; set; }
         public ComContext(): base ("Data Source=192.168.0.184;Initial Catalog=Companies;Persist Security Info=True;User ID=Companies;Password=@devlabs1")
         {
 
