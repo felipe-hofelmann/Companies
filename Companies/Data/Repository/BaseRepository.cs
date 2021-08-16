@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Data.Repository
 {
-    public class BaseRepository<T> where T :Base
+    public abstract class BaseRepository<T> where T :Base
     {
     
-        public void Create(T model)
+        public virtual void Create(T model)
         {
             using (var context = new ComContext())
             {
@@ -19,7 +19,7 @@ namespace Data.Repository
                 context.SaveChanges();
             }
         }
-        public T Read(int id)
+        public virtual T Read(int id)
         {
             T model = Activator.CreateInstance<T>();
             using (var context = new ComContext())
@@ -28,7 +28,7 @@ namespace Data.Repository
             }
             return model;
         }
-        public List<T> Read()
+        public virtual List<T> Read()
         {
             List<T> list = new List<T>();
             using (var context = new ComContext())
@@ -37,7 +37,7 @@ namespace Data.Repository
             }
             return list;
         }
-        public void Update(T model)
+        public virtual void Update(T model)
         {
             using (var context = new ComContext())
             {
@@ -46,7 +46,7 @@ namespace Data.Repository
             }
 
         }
-        public void Delete(int id)
+        public virtual void Delete(int id)
         {
             using (var context = new ComContext())
             {
