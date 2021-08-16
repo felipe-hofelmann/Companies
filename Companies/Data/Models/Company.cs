@@ -11,6 +11,6 @@ namespace Data.Models
         public Profile Profile { get; set; }
         public Jobs Jobs { get; set; }
         public Contacts Contact { get; set; }
-        //public Address Address { get; set; }
+        public Address Address { get; set; }
     }
 }
